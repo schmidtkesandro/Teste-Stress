@@ -7,7 +7,6 @@ import (
 	"os"
 	"time"
 
-	// "github.com/yourusername/myloadtester/loadtester"
 	"github.com/sandroschmidtke/teste-stress/loadtester"
 )
 
@@ -22,8 +21,12 @@ func main() {
 	flag.Parse()
 
 	if url == "" || requests <= 0 || concurrency <= 0 {
-		fmt.Println("Por favor, forneça a URL do serviço, o número total de requests e o nível de concorrência.")
+		fmt.Println("Por favor, forneça a URL do serviço, o número total de requests e o nível de concorrência no formato:")
 		flag.PrintDefaults()
+		fmt.Println("")
+		fmt.Println("Exemplo:")
+		fmt.Println("go run main.go --url=http://google.com --requests=1000 --concurrency=10")
+		fmt.Println("")
 		os.Exit(1)
 	}
 
