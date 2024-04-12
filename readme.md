@@ -23,5 +23,6 @@ Distribuição de outros códigos de status HTTP (como 404, 500, etc.).
 Execução da aplicação:
 go run main.go --url=<http://google.com> --requests=1000 --concurrency=10
 ou
-Poderemos utilizar essa aplicação fazendo uma chamada via docker. Ex:
-docker run <sua imagem docker> —url=<http://google.com> —requests=1000 —concurrency=10
+Poderemos utilizar essa aplicação fazendo uma chamada via Docker. Ex:
+docker run <sua imagem docker> —url=<http://google.com> —requests=1000 —concurrency=10 onde 
+docker run teste-stress --url=http://google.com --requests=1000 --concurrency=10
